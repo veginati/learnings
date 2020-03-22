@@ -1,0 +1,12 @@
+#BASE IMAGE
+FROM node:alpine
+#WORKING DIRECTORY
+WORKDIR '/app'
+#COPY PACKAGE JSON
+COPY ./package.json ./
+#INSTALL DEPENDENCY
+RUN npm install
+#COPY OTHER FILES
+COPY ./ ./
+#PRIMARY COMMANDTO EXEC
+CMD ["npm","start"]
