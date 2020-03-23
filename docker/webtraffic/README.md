@@ -1,6 +1,6 @@
-# RUN Following to start
+# RUN Following to start \n
 docker-compose up
-# RUN Following to start in background
+# RUN Following to start in background \n
 docker-compose up -d
-# STOP all the containers running in background
+# STOP all the containers running in background \n
 docker-compose down
