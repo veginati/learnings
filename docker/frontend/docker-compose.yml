@@ -1,0 +1,16 @@
+version: '3'
+# react-app is the name of the container, it can be given an name.
+# '.' looks for a dockerfile in the current dir
+ # passing the custom docker file.
+  # . represents current working directory, /app docker container folder mapped to the local file system using docker volumes.  
+services:
+  web:
+    build:
+      context: .
+      dockerfile: Dockerfile.dev
+    stdin_open: true
+    ports:
+      - "3000:3000"
+    volumes:
+      - /app/node_modules
+      - .:/app
