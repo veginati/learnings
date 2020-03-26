@@ -9,3 +9,7 @@ docker-compose up
 
 <!-- Execute a another command in the running conainer -->
 docker exec -it [image-id] npm run test
+
+<!-- Two phase, seperates build and production -->
+docker build .
+docker run -p 8080:80 920ef569e094
