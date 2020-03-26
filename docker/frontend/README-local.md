@@ -6,3 +6,6 @@ docker run -it -p 3000:3000 -v /app/node_modules -v $(pwd):/app [image-id]
 
 <!-- # This project can also use docker compose -->
 docker-compose up
+
+<!-- Execute a another command in the running conainer -->
+docker exec -it [image-id] npm run test
